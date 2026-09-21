@@ -7,14 +7,16 @@
 .drone-flight{position:absolute;left:0;top:0;width:94px;animation:drone-tour 15s ease-in-out infinite;filter:drop-shadow(0 10px 6px #18364b26)}
 .drone-body{display:block;width:100%;height:auto;animation:drone-bank 5s ease-in-out infinite}
 .rotor{transform-box:fill-box;transform-origin:center;animation:rotor-spin .16s linear infinite}
-.drone-toggle{position:absolute;width:1px;height:1px;opacity:0;bottom:12px;left:18px;pointer-events:auto}
-.drone-control{position:absolute;right:15px;bottom:15px;pointer-events:auto;cursor:pointer;min-height:32px;padding:5px 11px;border-radius:20px;border:1px solid #bacdcf;background:#fafbf9;color:#294b60;font-size:11px;box-shadow:0 2px 8px #18364b0a}
-.drone-toggle:focus-visible+.drone-control{outline:3px solid #397986;outline-offset:3px}
-.drone-start{display:none}.drone-toggle:not(:checked)+.drone-control .drone-stop{display:none}.drone-toggle:not(:checked)+.drone-control .drone-start{display:inline}
-.drone-toggle:not(:checked)~.drone-airspace *{animation-play-state:paused}
+/* Auto respects device preferences; Play is an explicit motion choice. */
+.drone-mode{position:absolute;opacity:0;width:1px;height:1px;bottom:18px;right:30px;pointer-events:auto}
+.drone-controls{position:absolute;right:15px;bottom:15px;display:flex;gap:3px;pointer-events:auto;padding:3px;border:1px solid #bacdcf;border-radius:22px;background:#fafbf9;color:#294b60;font-size:11px}
+.drone-controls label{cursor:pointer;border-radius:18px;padding:6px 11px;min-height:32px;display:flex;align-items:center}
+#drone-auto:checked~.drone-controls label[for="drone-auto"],#drone-play:checked~.drone-controls label[for="drone-play"],#drone-pause:checked~.drone-controls label[for="drone-pause"]{background:#1b354b;color:white}
+#drone-auto:focus-visible~.drone-controls label[for="drone-auto"],#drone-play:focus-visible~.drone-controls label[for="drone-play"],#drone-pause:focus-visible~.drone-controls label[for="drone-pause"]{outline:3px solid #397986;outline-offset:2px}
+#drone-pause:checked~.drone-airspace *{animation-play-state:paused}
 .engineering-scene .art-caption{padding-bottom:58px}
 @keyframes drone-tour{0%,100%{left:0;top:15%}25%{left:calc(100% - 94px);top:0}50%{left:calc(100% - 94px);top:calc(100% - 72px)}75%{left:0;top:55%}}
 @keyframes drone-bank{0%,100%{transform:rotate(-5deg) translateY(0)}50%{transform:rotate(6deg) translateY(-7px)}}
 @keyframes rotor-spin{to{transform:rotateY(360deg)}}
 @media(max-width:640px){.engineering-scene{width:100%;max-width:420px;justify-self:center}.drone-airspace{inset:64px 12px 72px}.drone-flight{width:76px}}
-@media(prefers-reduced-motion:reduce){.drone-airspace *{animation:none!important}.drone-flight{left:calc(50% - 47px);top:12%}.drone-control,.drone-toggle{display:none}}
+@media(prefers-reduced-motion:reduce){#drone-auto:checked~.drone-airspace *{animation-play-state:paused}}

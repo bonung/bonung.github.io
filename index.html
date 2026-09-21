@@ -6,7 +6,7 @@
   <meta name="description" content="공주대학교 기계공학전공 구본웅의 개인 홈페이지. 시스템 제어, CFD 해석, 자동제어와 스마트팜에 관심을 두고 공부합니다.">
   <title>구본웅 | 기계공학 포트폴리오</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%231b354b'/%3E%3Cpath d='M10 28V12h10a4 4 0 010 8H10m10 0a4 4 0 010 8H10' fill='none' stroke='%23ffffff' stroke-width='3'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=drone-motion-2">
 </head>
 <body>
   <a class="skip-link" href="#main">본문 바로가기</a>
@@ -25,8 +25,14 @@
       </div>
       <div class="engineering-scene">
       <div class="drone-demo">
-        <input class="drone-toggle" type="checkbox" id="drone-motion" checked>
-        <label class="drone-control" for="drone-motion"><span class="drone-stop">Ⅱ 드론 멈추기</span><span class="drone-start">▷ 드론 날리기</span></label>
+        <input class="drone-mode" type="radio" name="drone-mode" id="drone-auto" checked>
+        <input class="drone-mode" type="radio" name="drone-mode" id="drone-play">
+        <input class="drone-mode" type="radio" name="drone-mode" id="drone-pause">
+        <div class="drone-controls" role="group" aria-label="드론 움직임">
+          <label for="drone-auto">자동</label>
+          <label for="drone-play">▷ 재생</label>
+          <label for="drone-pause">Ⅱ 정지</label>
+        </div>
         <div class="drone-airspace" aria-hidden="true">
           <div class="drone-flight"><svg class="drone-body" viewBox="0 0 140 92" xmlns="http://www.w3.org/2000/svg">
             <g stroke="#294b60" stroke-width="7" stroke-linecap="round"><path d="M59 43L28 24M81 43L112 24M58 51L28 66M82 51L112 66"/><path d="M57 58L50 75H60M83 58L90 75H80" fill="none" stroke-width="3"/></g>
