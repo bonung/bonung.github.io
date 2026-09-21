@@ -20,3 +20,21 @@
 @keyframes rotor-spin{to{transform:rotateY(360deg)}}
 @media(max-width:640px){.engineering-scene{width:100%;max-width:420px;justify-self:center}.drone-airspace{inset:64px 12px 72px}.drone-flight{width:76px}}
 @media(prefers-reduced-motion:reduce){#drone-auto:checked~.drone-airspace *{animation-play-state:paused}}
+
+/* Moving round dashes represent particles along the original SVG streamlines. */
+.air-particle-lane{
+  fill:none;
+  stroke:#317c88;
+  stroke-width:3.8;
+  stroke-linecap:round;
+  stroke-dasharray:.01 24.99;
+  stroke-dashoffset:0;
+  opacity:.9;
+  animation:airflow-travel var(--flow-duration,1.4s) linear infinite;
+  animation-delay:var(--flow-delay,0s);
+}
+@keyframes airflow-travel{to{stroke-dashoffset:-25}}
+.engineering-scene:has(#drone-pause:checked) .air-particle-lane{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){
+  .engineering-scene:has(#drone-auto:checked) .air-particle-lane{animation-play-state:paused}
+}

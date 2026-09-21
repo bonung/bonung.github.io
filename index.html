@@ -6,7 +6,7 @@
   <meta name="description" content="공주대학교 기계공학전공 구본웅의 개인 홈페이지. 시스템 제어, CFD 해석, 자동제어와 스마트팜에 관심을 두고 공부합니다.">
   <title>구본웅 | 기계공학 포트폴리오</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%231b354b'/%3E%3Cpath d='M10 28V12h10a4 4 0 010 8H10m10 0a4 4 0 010 8H10' fill='none' stroke='%23ffffff' stroke-width='3'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css?v=drone-motion-2">
+  <link rel="stylesheet" href="styles.css?v=airflow-1">
 </head>
 <body>
   <a class="skip-link" href="#main">본문 바로가기</a>
@@ -28,7 +28,7 @@
         <input class="drone-mode" type="radio" name="drone-mode" id="drone-auto" checked>
         <input class="drone-mode" type="radio" name="drone-mode" id="drone-play">
         <input class="drone-mode" type="radio" name="drone-mode" id="drone-pause">
-        <div class="drone-controls" role="group" aria-label="드론 움직임">
+        <div class="drone-controls" role="group" aria-label="드론과 공기 흐름 재생 설정">
           <label for="drone-auto">자동</label>
           <label for="drone-play">▷ 재생</label>
           <label for="drone-pause">Ⅱ 정지</label>
@@ -50,6 +50,16 @@
           <g stroke="#769ba4" stroke-width="1.3">
             <path d="M0 100C130 100 135 75 220 85S340 125 480 100"/><path d="M0 126C125 126 142 94 227 108S341 153 480 126"/><path d="M0 152C120 152 148 111 232 133S346 180 480 152"/><path d="M0 178C112 178 141 130 228 153S344 204 480 178"/><path d="M0 204C99 204 120 153 187 163"/>
             <path d="M0 230C115 230 136 262 225 246S348 223 480 230"/><path d="M0 256C127 256 143 284 229 271S347 249 480 256"/><path d="M0 282C132 282 154 304 235 296S344 277 480 282"/><path d="M0 308C136 308 160 328 242 320S350 303 480 308"/>
+          </g>
+          <g class="air-particles" aria-hidden="true">
+            <path class="air-particle-lane" d="M0 100C130 100 135 75 220 85S340 125 480 100" pathLength="100" style="--flow-duration:1.5s;--flow-delay:-0.00s"/>
+            <path class="air-particle-lane" d="M0 126C125 126 142 94 227 108S341 153 480 126" pathLength="100" style="--flow-duration:1.35s;--flow-delay:-0.23s"/>
+            <path class="air-particle-lane" d="M0 152C120 152 148 111 232 133S346 180 480 152" pathLength="100" style="--flow-duration:1.2s;--flow-delay:-0.46s"/>
+            <path class="air-particle-lane" d="M0 178C112 178 141 130 228 153S344 204 480 178" pathLength="100" style="--flow-duration:1.05s;--flow-delay:-0.69s"/>
+            <path class="air-particle-lane" d="M0 230C115 230 136 262 225 246S348 223 480 230" pathLength="100" style="--flow-duration:1.15s;--flow-delay:-0.92s"/>
+            <path class="air-particle-lane" d="M0 256C127 256 143 284 229 271S347 249 480 256" pathLength="100" style="--flow-duration:1.3s;--flow-delay:-1.15s"/>
+            <path class="air-particle-lane" d="M0 282C132 282 154 304 235 296S344 277 480 282" pathLength="100" style="--flow-duration:1.45s;--flow-delay:-1.38s"/>
+            <path class="air-particle-lane" d="M0 308C136 308 160 328 242 320S350 303 480 308" pathLength="100" style="--flow-duration:1.6s;--flow-delay:-1.61s"/>
           </g>
           <path d="M145 207C144 154 233 151 365 217C262 205 202 244 157 221C149 217 145 212 145 207Z" fill="url(#foil)"/>
           <path d="M151 196C182 172 255 181 350 213" stroke="#b5ced0" stroke-opacity=".6"/>
