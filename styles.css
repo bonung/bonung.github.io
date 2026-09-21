@@ -51,3 +51,36 @@
 .flight-target::before{width:7px;height:1px}.flight-target::after{width:1px;height:7px}
 .manual-flight .flight-target{display:block}.flight-arrived .flight-target{opacity:.4}
 @media(max-width:640px){.interactive-ready .drone-airspace{inset:64px 12px 132px}.flight-hint{font-size:9px}}
+
+
+/* Page companions stay decorative and never intercept page links or drone controls. */
+body{position:relative;padding-bottom:74px}
+.ground-layer{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:15}
+.ground-layer[hidden],.companions-controls[hidden]{display:none}
+.ground-party{position:absolute;left:0;top:0;width:156px;height:116px;will-change:transform;pointer-events:none}
+.ground-facing{width:100%;height:100%;transform:scaleX(var(--facing,1));filter:drop-shadow(0 2px 2px #1b354b12)}
+.ground-party svg{display:block;width:100%;height:100%;overflow:visible}
+.robot-leg,.robot-arm,.dog-leg{transform-box:view-box;animation-play-state:paused;transform-origin:41px 73px}
+.robot-leg.leg-back{animation:robot-step .7s ease-in-out infinite paused}.robot-leg.leg-front{animation:robot-step .7s ease-in-out -.35s infinite paused}
+.robot-arm{transform-origin:41px 43px}.arm-front{animation:robot-step .7s ease-in-out infinite paused}.arm-back{animation:robot-step .7s ease-in-out -.35s infinite paused}
+.dog-leg{transform-origin:120px 94px}.dog-back{animation:dog-step .42s ease-in-out infinite paused}.dog-front{animation:dog-step .42s ease-in-out -.21s infinite paused}
+.robot-figure{animation:robot-bob .35s ease-in-out infinite paused}
+.dog-figure{animation:dog-bob .42s ease-in-out -.15s infinite paused}
+.dog-tail{transform-box:view-box;transform-origin:100px 85px;animation:tail-wag .5s ease-in-out infinite paused}
+.ground-party.walking *{animation-play-state:running}
+@keyframes robot-step{0%,100%{transform:rotate(-10deg)}50%{transform:rotate(10deg)}}
+@keyframes dog-step{0%,100%{transform:rotate(-12deg)}50%{transform:rotate(12deg)}}
+@keyframes robot-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}
+@keyframes dog-bob{0%,100%{transform:translate(-2px,0)}50%{transform:translate(1px,-2px)}}
+@keyframes tail-wag{0%,100%{transform:rotate(-12deg)}50%{transform:rotate(18deg)}}
+.ground-target{display:none;position:absolute;width:24px;height:9px;border:1px solid #4b9194;border-radius:50%;transform:translate(-50%,-50%);background:#85c5bd26}
+.ground-layer[data-mode="manual"] .ground-target{display:block}
+.ground-layer.arrived .ground-target{opacity:0}
+.companions-controls{position:fixed;right:18px;bottom:16px;z-index:25;display:flex;align-items:center;gap:6px;padding:7px 9px 7px 14px;border:1px solid #cddcdd;border-radius:15px;background:#fafbf9f5;box-shadow:0 4px 20px #173a4b12;color:#29465c;font-size:11px}
+.companions-controls>span{margin-right:5px;font-weight:700}.companions-controls small{display:block;font-size:9px;font-weight:400;color:#526d79}
+.companions-controls button{border:0;border-radius:10px;padding:9px 11px;min-height:36px;background:transparent;color:inherit;font:inherit;cursor:pointer}
+.companions-controls button[aria-pressed="true"]{background:#29465c;color:#fff}
+.companions-controls button:focus-visible{outline:3px solid #397986;outline-offset:2px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:640px){.ground-party{width:117px;height:87px}.companions-controls{right:10px;bottom:10px;gap:3px;padding:6px 8px}.companions-controls button{padding:8px}.companions-controls>span{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.ground-party.walking *{animation-play-state:paused}}

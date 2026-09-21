@@ -6,7 +6,7 @@
   <meta name="description" content="공주대학교 기계공학전공 구본웅의 개인 홈페이지. 시스템 제어, CFD 해석, 자동제어와 스마트팜에 관심을 두고 공부합니다.">
   <title>구본웅 | 기계공학 포트폴리오</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%231b354b'/%3E%3Cpath d='M10 28V12h10a4 4 0 010 8H10m10 0a4 4 0 010 8H10' fill='none' stroke='%23ffffff' stroke-width='3'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css?v=click-flight-1">
+  <link rel="stylesheet" href="styles.css?v=companions-1">
 </head>
 <body>
   <a class="skip-link" href="#main">본문 바로가기</a>
@@ -189,6 +189,173 @@
   space.setAttribute('aria-label', '드론 목적지 선택. 클릭 또는 터치로 이동, 방향키로 조종, Enter로 중앙 이동');
   space.setAttribute('aria-describedby', 'flight-hint');
   draw(); restart();
+})();
+
+</script>
+  <div class="ground-layer" aria-hidden="true" hidden>
+    <span class="ground-target"></span>
+    <div class="ground-party">
+      <div class="ground-facing">
+        <svg viewBox="0 0 156 116" xmlns="http://www.w3.org/2000/svg" fill="none">
+          <ellipse cx="42" cy="110" rx="28" ry="4" fill="#1b354b" opacity=".12"/>
+          <ellipse cx="121" cy="110" rx="28" ry="4" fill="#1b354b" opacity=".12"/>
+          <g class="robot-figure" stroke="#345369" stroke-width="1.5" stroke-linejoin="round">
+            <g class="robot-leg leg-back"><path d="M33 72L31 90L28 105" stroke="#345369" stroke-width="10" stroke-linecap="round"/><path d="M33 75L31 88M30 95L28 102" stroke="#e3ecee" stroke-width="6" stroke-linecap="round"/><path d="M22 104H34V110H19Q18 106 22 104Z" fill="#29465c"/><circle cx="31" cy="91" r="3" fill="#89b8bc"/></g>
+            <g class="robot-leg leg-front"><path d="M49 72L51 90L54 105" stroke="#345369" stroke-width="10" stroke-linecap="round"/><path d="M49 75L51 88M52 95L54 102" stroke="#f3f7f6" stroke-width="6" stroke-linecap="round"/><path d="M49 104H59Q64 106 63 110H49Z" fill="#29465c"/><circle cx="51" cy="91" r="3" fill="#89b8bc"/></g>
+            <g class="robot-arm arm-back"><path d="M25 43L18 59L17 72" stroke="#38576c" stroke-width="7" stroke-linecap="round"/><path d="M24 46L19 57M18 63L17 69" stroke="#dee9eb" stroke-width="4" stroke-linecap="round"/><circle cx="17" cy="74" r="4" fill="#e3edec"/></g>
+            <rect x="26" y="37" width="30" height="35" rx="10" fill="#e8eff0"/>
+            <path d="M30 62H52L49 76H34Z" fill="#29465c"/>
+            <rect x="32" y="45" width="18" height="13" rx="4" fill="#29465c"/>
+            <circle cx="41" cy="51.5" r="3.3" fill="#7ad4c4" stroke="none"/>
+            <path d="M36 35V40H46V35" fill="#597b8c"/>
+            <g class="robot-head"><rect x="23" y="9" width="36" height="28" rx="11" fill="#f5f8f7"/><rect x="28" y="16" width="26" height="13" rx="6" fill="#203e53"/><path d="M33 22H36M46 22H49" stroke="#9be3dd" stroke-width="2.5" stroke-linecap="round"/><path d="M39 33H43" stroke="#7895a1" stroke-linecap="round"/><path d="M41 8V4"/><circle cx="41" cy="3" r="2" fill="#74bcad" stroke="none"/></g>
+            <g class="robot-arm arm-front"><path d="M57 43L65 60L65 73" stroke="#38576c" stroke-width="7" stroke-linecap="round"/><path d="M58 46L64 57M65 64V70" stroke="#f3f7f6" stroke-width="4" stroke-linecap="round"/><circle cx="65" cy="75" r="4" fill="#e3edec"/></g>
+          </g>
+          <g class="dog-figure" stroke="#795b43" stroke-width="1.3" stroke-linejoin="round">
+            <g class="dog-leg dog-back"><path d="M105 93L102 107H108M128 94L128 107H134" stroke="#a77b52" stroke-width="5" stroke-linecap="round"/></g>
+            <path class="dog-tail" d="M101 85Q82 77 89 69" stroke="#b68758" stroke-width="6" stroke-linecap="round"/>
+            <path d="M101 82Q116 75 133 83L136 97Q119 106 101 96Z" fill="#cda270"/>
+            <path d="M119 92L132 90L133 101L121 102Z" fill="#f7eee0" stroke="none"/>
+            <g class="dog-leg dog-front"><path d="M108 96L109 108H115M134 95L138 107H144" stroke="#cfa475" stroke-width="5" stroke-linecap="round"/></g>
+            <g class="dog-head"><path d="M125 75Q119 66 125 57Q134 55 139 67" fill="#a57349"/><path d="M129 62Q142 59 147 72L153 78Q155 86 146 88H132Q124 84 126 73Z" fill="#d7af7d"/><path d="M139 77Q153 73 154 81Q154 89 143 88L137 83Z" fill="#fcf1df"/><ellipse cx="152" cy="79" rx="3" ry="2.5" fill="#314859" stroke="none"/><circle cx="139" cy="71" r="2" fill="#314859" stroke="none"/><path d="M142 85L145 84" stroke="#795b43" stroke-linecap="round"/><path d="M128 61Q119 54 119 65L124 76Q129 77 129 70Z" fill="#94633f"/><path d="M128 87L138 88" stroke="#488d92" stroke-width="4" stroke-linecap="round"/><circle cx="135" cy="92" r="2" fill="#e5c66f" stroke="none"/></g>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div class="companions-controls" hidden>
+    <span>로봇과 강아지 <small>빈 곳을 클릭해 보세요</small></span>
+    <button type="button" class="companions-auto" aria-pressed="true">자동 산책</button>
+    <button type="button" class="companions-pause" aria-pressed="false">Ⅱ 정지</button>
+  </div>
+  <p class="companions-status sr-only" role="status"></p>
+
+<script>
+(() => {
+  const layer = document.querySelector('.ground-layer');
+  const party = layer.querySelector('.ground-party');
+  const targetMark = layer.querySelector('.ground-target');
+  const controls = document.querySelector('.companions-controls');
+  const autoButton = controls.querySelector('.companions-auto');
+  const pauseButton = controls.querySelector('.companions-pause');
+  const status = document.querySelector('.companions-status');
+  const scene = document.querySelector('.engineering-scene');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)');
+  let mode = reduce.matches ? 'paused' : 'auto', resumeMode = 'auto';
+  let point = {x:0,y:0}, destination = null, route = [], frame = 0, last = 0, restUntil = 0, patrol = 0;
+  let world, obstacle;
+  layer.hidden = false; controls.hidden = false;
+
+  function geometry() {
+    const s = scene.getBoundingClientRect(), art = scene.querySelector('.engineering-art').getBoundingClientRect();
+    const half = party.offsetWidth / 2, height = party.offsetHeight;
+    world = {width:document.documentElement.clientWidth, height:document.documentElement.scrollHeight, half, actorHeight:height};
+    // Inflate the obstacle by the entire robot-and-dog formation, including swinging limbs.
+    obstacle = {left:Math.min(s.left,art.left)+scrollX-half-12,
+      right:Math.max(s.right,art.right)+scrollX+half+12,
+      top:Math.min(s.top,art.top)+scrollY-10,
+      bottom:Math.max(s.bottom,art.bottom)+scrollY+height+10};
+  }
+  const inside = p => p.x > obstacle.left && p.x < obstacle.right && p.y > obstacle.top && p.y < obstacle.bottom;
+  const clamp = p => ({x:Math.max(world.half+9,Math.min(world.width-world.half-9,p.x)),y:Math.max(world.actorHeight+10,Math.min(world.height-12,p.y))});
+  const distance = (a,b) => Math.hypot(a.x-b.x,a.y-b.y);
+  function safePoint(p) {
+    p = clamp(p);
+    if (!inside(p)) return p;
+    const candidates = [
+      {x:obstacle.left-2,y:p.y},{x:obstacle.right+2,y:p.y},
+      {x:p.x,y:obstacle.top-2},{x:p.x,y:obstacle.bottom+2}
+    ].map(clamp).filter(q=>!inside(q));
+    candidates.sort((a,b)=>distance(a,p)-distance(b,p));
+    return candidates[0] || {x:world.half+9,y:world.actorHeight+10};
+  }
+  function clearSegment(a,b) {
+    let enter=0, exit=1;
+    for (const [axis,lo,hi] of [['x',obstacle.left,obstacle.right],['y',obstacle.top,obstacle.bottom]]) {
+      const delta=b[axis]-a[axis];
+      if (Math.abs(delta)<.00001) {if(a[axis]<=lo || a[axis]>=hi)return true;}
+      else {const t1=(lo-a[axis])/delta,t2=(hi-a[axis])/delta;enter=Math.max(enter,Math.min(t1,t2));exit=Math.min(exit,Math.max(t1,t2));if(enter>=exit)return true;}
+    }
+    return exit<=0 || enter>=1;
+  }
+  function findRoute(start,end) {
+    const nodes=[start,end,
+      {x:obstacle.left-3,y:obstacle.top-3},{x:obstacle.right+3,y:obstacle.top-3},
+      {x:obstacle.left-3,y:obstacle.bottom+3},{x:obstacle.right+3,y:obstacle.bottom+3}];
+    const costs=nodes.map(()=>Infinity), prev=nodes.map(()=>-1), done=new Set();costs[0]=0;
+    for(let k=0;k<nodes.length;k++){
+      let n=-1;for(let i=0;i<nodes.length;i++)if(!done.has(i)&&(n<0||costs[i]<costs[n]))n=i;
+      if(n<0||!Number.isFinite(costs[n])||n===1)break;done.add(n);
+      for(let j=0;j<nodes.length;j++)if(j!==n&&clearSegment(nodes[n],nodes[j])){
+        const c=costs[n]+distance(nodes[n],nodes[j]);if(c<costs[j]){costs[j]=c;prev[j]=n;}
+      }
+    }
+    if(!Number.isFinite(costs[1]))return [];
+    const result=[];for(let n=1;n!==0;n=prev[n]){if(n<0)return [];result.unshift(nodes[n]);}return result;
+  }
+  function draw() {
+    party.style.transform=`translate3d(${point.x-world.half}px,${point.y-world.actorHeight}px,0)`;
+    if(destination){targetMark.style.left=`${destination.x}px`;targetMark.style.top=`${destination.y}px`;}
+  }
+  function setDestination(p) {
+    destination=safePoint(p);route=findRoute(point,destination);layer.classList.remove('arrived');draw();
+  }
+  function syncControls() {
+    layer.dataset.mode=mode;
+    autoButton.setAttribute('aria-pressed',String(mode==='auto'));
+    pauseButton.setAttribute('aria-pressed',String(mode==='paused'));
+    pauseButton.textContent=mode==='paused'?'▷ 계속':'Ⅱ 정지';
+  }
+  function schedule() {
+    if(!frame && !document.hidden && mode!=='paused'){last=0;frame=requestAnimationFrame(tick);}
+  }
+  function choosePatrol() {
+    const patterns=[[.22,.84],[.48,.66],[.18,.50],[.70,.90],[.33,.76]];
+    const [x,y]=patterns[patrol++%patterns.length];
+    setDestination({x:x*world.width,y:scrollY+Math.max(world.actorHeight+30,innerHeight*y)});
+  }
+  function tick(time) {
+    frame=0;if(mode==='paused'||document.hidden){party.classList.remove('walking');return;}
+    const dt=last?Math.min((time-last)/1000,.05):0;last=time;
+    if(!route.length){
+      party.classList.remove('walking');layer.classList.add('arrived');
+      if(mode==='manual')return;
+      if(time>=restUntil){choosePatrol();restUntil=time+1400;}
+    }else{
+      const goal=route[0], dx=goal.x-point.x,dy=goal.y-point.y,d=Math.hypot(dx,dy);
+      const step=Math.min(d,175*dt);
+      if(d<.6){point={...goal};route.shift();if(!route.length)restUntil=time+1400;}
+      else{point.x+=dx/d*step;point.y+=dy/d*step;if(Math.abs(dx)>.5)party.style.setProperty('--facing',dx>0?1:-1);}
+      party.classList.toggle('walking',step>.1);draw();
+    }
+    frame=requestAnimationFrame(tick);
+  }
+  document.addEventListener('click',event=>{
+    if(!event.isTrusted || event.detail===0 || event.button!==0)return;
+    if(event.target.closest('.engineering-scene,a,button,input,label,select,textarea,summary,[role="button"],[contenteditable="true"],.companions-controls'))return;
+    if(getSelection()?.toString())return;
+    geometry();mode='manual';syncControls();setDestination({x:event.pageX,y:event.pageY});
+    if(reduce.matches){point={...destination};route=[];draw();layer.classList.add('arrived');party.classList.remove('walking');}
+    else schedule();
+    status.textContent='로봇과 강아지가 선택한 위치로 이동합니다.';
+  });
+  autoButton.addEventListener('click',()=>{mode='auto';syncControls();geometry();choosePatrol();schedule();});
+  pauseButton.addEventListener('click',()=>{
+    if(mode==='paused'){mode=resumeMode;syncControls();schedule();}
+    else{resumeMode=mode;mode='paused';cancelAnimationFrame(frame);frame=0;party.classList.remove('walking');syncControls();}
+  });
+  function resize() {
+    cancelAnimationFrame(frame);frame=0;geometry();point=safePoint(point);
+    if(destination)setDestination(destination);draw();schedule();
+  }
+  addEventListener('resize',resize);
+  document.addEventListener('visibilitychange',()=>{cancelAnimationFrame(frame);frame=0;last=0;party.classList.remove('walking');schedule();});
+  reduce.addEventListener('change',()=>{if(reduce.matches){if(mode!=='paused')resumeMode=mode;mode='paused';cancelAnimationFrame(frame);frame=0;party.classList.remove('walking');syncControls();}});
+  geometry();
+  const intro=document.querySelector('.hero-copy').getBoundingClientRect();
+  const introButton=document.querySelector('.hero-copy .button').getBoundingClientRect();
+  point=safePoint({x:intro.left+world.half+32,y:introButton.bottom+scrollY+140});
+  draw();syncControls();schedule();
 })();
 
 </script>
