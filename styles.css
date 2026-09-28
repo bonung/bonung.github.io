@@ -93,3 +93,47 @@ body{position:relative;padding-bottom:74px}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 @media(max-width:640px){.ground-party{width:117px;height:87px}.companions-controls{right:10px;bottom:10px;gap:3px;padding:6px 8px}.companions-controls button{padding:8px}.companions-controls>span{font-size:10px}}
 @media(prefers-reduced-motion:reduce){.ground-party.animated *{animation-play-state:paused}}
+
+/* Four self-contained, illustrative engineering vignettes. */
+.interests .card{padding:21px 18px 26px;min-width:0}
+.interests .card-top{margin-bottom:18px}
+.interest-visual{margin:0 -3px 24px;border:1px solid #dce7e3;border-radius:7px;overflow:hidden;background:#edf3ef;aspect-ratio:280/184}
+.interest-visual svg{display:block;width:100%;height:100%}
+.visual-grid{fill:none;stroke:#416d78;stroke-width:.6;opacity:.075}
+.diagram-label{font-size:11px;font-weight:600;text-anchor:middle;fill:#294b60}
+.diagram-small{font-size:8px;letter-spacing:.6px;fill:#577681}
+.diagram-block{stroke:#a5bfc1;stroke-width:1}.diagram-block.light{fill:#f5f9f6}.diagram-block.dark{fill:#2a5266;stroke:#2a5266}
+.signal-line,.signal-arrow{stroke:#72969d;stroke-width:1.5;fill:none}
+.signal-pulse{stroke:#438f99;stroke-width:3;fill:none;stroke-dasharray:3 17;animation:card-signal 1s linear infinite}
+@keyframes card-signal{to{stroke-dashoffset:-20}}
+.graph-axis{stroke:#a0b8bd;fill:none;stroke-width:1}
+.graph-reference{stroke:#b6aa84;stroke-dasharray:3 3;fill:none;stroke-width:1}
+.response-base{fill:none;stroke:#7bafac;stroke-opacity:.2;stroke-width:2}
+.response-draw{fill:none;stroke:#3c8c8d;stroke-width:2.2;stroke-dasharray:100;animation:card-response 5s ease-in-out infinite}
+@keyframes card-response{0%,8%{stroke-dashoffset:100;opacity:1}75%,90%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:.1}}
+.mini-flow-lines{fill:none;stroke:#8faeb5;stroke-width:1.1}
+.mini-flow-particles path{fill:none;stroke:#3d8593;stroke-width:3.2;stroke-linecap:round;stroke-dasharray:.01 24.99;animation:card-flow 1.7s linear infinite;animation-delay:var(--lane-delay,0s)}
+@keyframes card-flow{to{stroke-dashoffset:-25}}
+.servo-shoulder{transform-origin:86px 127px;animation:card-shoulder 5s ease-in-out infinite}
+.servo-elbow{transform-origin:109px 72px;animation:card-elbow 5s ease-in-out infinite}
+.servo-needle{transform-origin:220px 109px;animation:card-needle 5s ease-in-out infinite}
+@keyframes card-shoulder{0%,100%{transform:rotate(-10deg)}45%,65%{transform:rotate(9deg)}}
+@keyframes card-elbow{0%,100%{transform:rotate(-12deg)}45%,65%{transform:rotate(16deg)}}
+@keyframes card-needle{0%,100%{transform:rotate(-50deg)}45%,65%{transform:rotate(20deg)}}
+.sensor-signal{fill:none;stroke:#71a5a4;stroke-width:1.5;stroke-dasharray:3 5;animation:card-sensor 1s linear infinite}
+@keyframes card-sensor{to{stroke-dashoffset:-16}}
+.sensor-led{animation:card-led 2.5s ease-in-out infinite}
+@keyframes card-led{0%,100%{opacity:.45}50%{opacity:1}}
+.farm-leaf{transform-box:fill-box;transform-origin:center bottom;animation:card-leaf 4s ease-in-out infinite}
+.farm-leaf:nth-child(even){animation-delay:-2s}
+@keyframes card-leaf{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(4deg)}}
+.water-drop{animation:card-water 1.8s linear infinite}
+@keyframes card-water{0%{transform:translateY(-2px);opacity:0}15%{opacity:.9}85%{opacity:.7}100%{transform:translateY(27px);opacity:0}}
+.interest-heading-tools{text-align:right}
+.interest-heading-tools p{margin:0 0 10px;font-size:12px;color:var(--muted)}
+.interest-motion-button{font:inherit;font-size:11px;color:#365e6b;background:#fafbf9;border:1px solid #bed0d0;border-radius:20px;padding:7px 13px;min-height:34px;cursor:pointer}
+.interest-motion-button:focus-visible{outline:3px solid #397986;outline-offset:3px}
+.interests[data-visual-motion="pause"] .interest-visual *{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){.interests[data-visual-motion="auto"] .interest-visual *{animation-play-state:paused}}
+@media(max-width:640px){.interest-heading-tools{text-align:left;margin-top:15px}.interest-heading-tools p{margin-bottom:8px}}
+@media(max-width:560px){.interests .cards{grid-template-columns:1fr}.interests .card{padding:22px}.interest-visual{max-height:225px}.interests .card-en{min-height:0;margin-bottom:8px}.interests .card>p:last-child{font-size:13px}.interests .card-top{margin-bottom:15px}}
